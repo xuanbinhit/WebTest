@@ -1,0 +1,20 @@
+﻿@using WebApp.Models
+@{
+    Layout = null;
+    List<Product> products = Model;
+}
+<form>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Product (*)</label>
+        <div class="col-md-9">
+            <select class="form-select" id="productID" aria-label="Select Product">
+                <option selected>Select Product</option>
+                @foreach (var item in products)
+                {
+                    <option value="@item.ProductID">@item.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<WebApp.Models.CustomerBuy>
+@{
+    Layout = null;
+}
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.CustomerName - @item.CustomerEmail
+            </td>
+            <td>
+               @item.ShopName - @item.ShopLocation
+            </td>
+            <td>
+               @item.ProductName - @item.ProductPrice
+            </td>
+        </tr>
+}

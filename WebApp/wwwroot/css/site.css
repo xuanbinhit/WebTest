@@ -1,0 +1,120 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.modal.fade.show {
+    overflow-y: hidden !important;
+}
+
+.modal-dialog.modal-custom-icon .modal-content {
+    max-height: 100%;
+    height: 100%;
+}
+
+.modal-dialog.modal-custom-icon.modal-dialog-centered {
+    height: auto;
+}
+
+.modal-dialog.modal-custom-icon .modal-content .modal-body {
+    overflow: auto;
+    max-height: 100%;
+}
+
+.modal-dialog.modal-custom-icon {
+    height: calc(100% - 3.5rem);
+}
+
+.modal-custom-icon .modal-header i {
+    font-size: 16px;
+}
+
+.modal-custom-icon .modal-body .cnt-icon {
+    font-size: 150px;
+    text-align: center;
+    color: #B8BDD1;
+}
+
+.modal-custom-icon .modal-footer {
+    justify-content: center;
+}
+
+    .modal-custom-icon .modal-footer .btn-custom {
+        border: none;
+        padding: 6px 30px;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+.modal-dialog.modal-custom-icon .modal-content.fullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    left: 0;
+    border-radius: 0px;
+    top: -1px;
+    max-height: 100%;
+}
+
+    .modal-dialog.modal-custom-icon .modal-content.fullscreen .modal-body {
+        height: calc(100% - 200px);
+        overflow-y: auto;
+    }
+
+.modal-header .iconfullscreen,
+.modal-header .iconofffullscreen {
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    padding: 1rem 1rem;
+    margin: -1rem 0px -1rem auto;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+    .modal-header .iconfullscreen:hover,
+    .modal-header .iconofffullscreen:hover {
+        opacity: 0.75;
+    }
+
+.modal.show .modal-dialog {
+    -webkit-transform: none;
+    transform: none;
+}
+
+h4.modal-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 30px;
+}
+
+h4.modal-title, .modal-header .close {
+    font-size: 1.3125rem;
+}
+
+body.watting_popup {
+    background-image: url('../images/watting.svg');
+}

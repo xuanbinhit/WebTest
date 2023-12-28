@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebApp.Models.Shop>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<h2>Shop</h2>
+
+<p>
+    <a href="#" onclick="addShop()">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Location
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="table_shop">
+@await Html.PartialAsync("~/Views/Shop/ViewList.cshtml")
+    </tbody>
+</table>
+@section Scripts{
+    <script src="~/js/shop.js" asp-append-version="true"></script>
+}

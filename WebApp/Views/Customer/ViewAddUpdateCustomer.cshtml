@@ -1,0 +1,31 @@
+﻿@using WebApp.Models
+@{
+    ViewData["Title"] = "ViewAddUpdateCustomer";
+    Layout = null;
+    Customer customer = Model;
+}
+
+<form>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Full Name (*)</label>
+        <div class="col-md-9">
+            <input required value="@customer.Name" class="form-control" id="fullname" type="text" name="fullname" placeholder="Input FullName" />
+
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Date Of Birth (*)</label>
+        <div class="col-md-9">
+            <input required value="@(customer.DOB!=null?DateTime.Parse(customer.DOB.ToString()).ToString("yyyy-MM-dd"):"")" class="form-control" id="dob" type="date" name="dob" placeholder="Input Date Of Birth" />
+
+        </div>
+    </div>
+    <div class="row">
+        <label class="col-md-3 col-form-label" for="text-input">Email (*)</label>
+        <div class="col-md-9">
+            <input required value="@customer.Email" class="form-control" id="email" type="text" name="email" placeholder="Input Email" />
+
+        </div>
+    </div>
+</form>
+

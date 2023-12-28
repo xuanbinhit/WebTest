@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WebApp.Models.Product>
+
+@{
+    ViewData["Title"] = "Shop Product";
+    WebApp.Models.Shop shop = ViewBag.SchopDetail;
+}
+
+<h2>Shop Product: @(shop.Name)</h2>
+
+<p>
+    <a href="@Url.Action("Index","Shop")">Back</a> | 
+    <a href="#" onclick="addProduct(@shop.ShopID)">Add Product</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="table_shopproduct">
+@await Html.PartialAsync("~/Views/ShopProduct/ViewList.cshtml")
+    </tbody>
+</table>
+@section Scripts{
+    <script>
+    var shopId='@shop.ShopID';
+    </script>
+    <script src="~/js/shopproduct.js" asp-append-version="true"></script>
+}

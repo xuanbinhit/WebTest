@@ -1,0 +1,59 @@
+﻿@using WebApp.Models
+@{
+    ViewData["Title"] = "ViewAddUpdate";
+    Layout = null;
+    List<CustomerBuy> customerBuy = Model;
+    List<Customer> customers = ViewBag.Customer;
+}
+
+<form>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Customer (*)</label>
+        <div class="col-md-9">
+            <select class="form-select" id="customerID" aria-label="Select Customer">
+                <option selected>Select Customer</option>
+                @foreach (var item in customers)
+                {
+                    <option value="@item.CustomerID">@item.Name - @item.Email</option>
+                }
+            </select>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>                    
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Shop
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="table_shopping_select">
+            @foreach (var item in customerBuy)
+            {
+                <tr>
+                    <td>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox_product_@item.ShopProductID">
+                        <label class="form-check-label" for="checkbox_product_@item.ShopProductID">
+
+                        </label>
+                    </div>
+                    </td>
+                    <td>
+                        @item.ProductName - @item.ProductPrice
+                    </td>
+                    <td>
+                        @item.ShopName - @item.ShopLocation
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApp.Models.Customer>
+@{
+    Layout = null;
+}
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @(item.DOB!=null? DateTime.Parse(item.DOB.ToString()).ToString("MM/dd/yyyy"):"")
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                <a href="#" onclick="editCustomer(@item.CustomerID)">Edit</a> |                
+                <a href="#" onclick="deleteCustomer(@item.CustomerID)">Delete</a>
+            </td>
+        </tr>
+}

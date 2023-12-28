@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApp.Models.Product>
+@{
+    Layout = null;
+}
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Price
+            </td>
+            <td>
+                <a href="#" onclick="editProduct(@item.ProductID)">Edit</a> |                
+                <a href="#" onclick="deleteProduct(@item.ProductID)">Delete</a>
+                
+            </td>
+        </tr>
+}

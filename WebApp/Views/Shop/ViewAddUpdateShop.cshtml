@@ -1,0 +1,24 @@
+﻿@using WebApp.Models
+@{
+    ViewData["Title"] = "ViewAddUpdate";
+    Layout = null;
+    Shop shop = Model;
+}
+
+<form>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Name (*)</label>
+        <div class="col-md-9">
+            <input required value="@shop.Name" class="form-control" id="shopname" type="text" name="shopname" placeholder="Input Name" />
+
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label class="col-md-3 col-form-label" for="text-input">Location (*)</label>
+        <div class="col-md-9">
+            <input required value="@shop.Location" class="form-control" id="shoplocation" type="text" name="shoplocation" placeholder="Input Location" />
+
+        </div>
+    </div>
+</form>
+
